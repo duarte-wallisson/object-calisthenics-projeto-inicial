@@ -49,6 +49,10 @@ public class Student {
             return true;
         }
 
+        return firstVideoWasWatchedInLessThan90Days();
+    }
+
+    private boolean firstVideoWasWatchedInLessThan90Days() {
         LocalDate firstDate = watchedVideos.values().stream()
                 .min(Comparator.naturalOrder())
                 .orElse(LocalDate.now());

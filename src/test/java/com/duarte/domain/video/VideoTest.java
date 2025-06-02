@@ -3,14 +3,15 @@ package com.duarte.domain.video;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class VideoTest {
 
     @Test
-    void changeVisibilityMustWork() {
+    void makingAVideoPublicMustWork() {
         Video video = new Video();
-        video.checkIfVisibilityIsValidAndUpdateIt(Video.PUBLIC);
+        video.publish();
 
-        assertEquals(Video.PUBLIC, video.getVisibility());
+        assertTrue(video.isPublic());
     }
 }

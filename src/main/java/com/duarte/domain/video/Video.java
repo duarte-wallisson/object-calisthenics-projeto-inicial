@@ -10,14 +10,21 @@ public class Video {
     public static final int PUBLIC = 1;
     public static final int PRIVATE = 2;
 
-    private int visibility = PRIVATE;
+    private boolean visibility = false;
     private int ageLimit;
 
-    public void checkIfVisibilityIsValidAndUpdateIt(int visibility) {
-        if (visibility == PUBLIC || visibility == PRIVATE) {
-            this.visibility = visibility;
-        } else {
-            throw new IllegalArgumentException("Invalid visibility");
-        }
+    public void publish(){
+        this.visibility = true;
     }
+
+    public boolean isPublic(){
+        return this.visibility;
+    }
+
+//    public void checkIfVisibilityIsValidAndUpdateIt(int visibility) {
+//        if (visibility != PUBLIC && visibility != PRIVATE) {
+//            throw new IllegalArgumentException("Invalid visibility");
+//        }
+//        this.visibility = visibility;
+//    }
 }
