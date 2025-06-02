@@ -10,3 +10,7 @@
 4. Envolva os seus tipos primitivos (caso eles tenham comportamento)
 5. Coleções de primeira classe
    1. Quando for uma linguagem dinamicamente tipada é interessante extrair uma propriedade que representa uma coleção para uma classe 
+6. Tenha apenas 1 ponto (operador de acesso de objetos) por linha (instrução)
+   1. lei de Demeter (não falar com estranhos)
+   2. Exceção: fluent interface
+7. Nunca abrevie

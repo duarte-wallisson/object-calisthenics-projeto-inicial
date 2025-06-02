@@ -1,8 +1,6 @@
 package com.duarte.domain.video;
 import com.duarte.domain.student.Student;
 
-import java.time.LocalDate;
-import java.time.Period;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -18,11 +16,8 @@ public class InMemoryVideoRepository implements VideoRepository {
 
     @Override
     public List<Video> videosFor(Student student) {
-        LocalDate today = LocalDate.now();
-        int studentAge = Period.between(student.getBirthDate(), today).getYears();
-
         return videos.stream()
-                .filter(video -> video.getAgeLimit() <= studentAge)
+                .filter(video -> video.getAgeLimit() <= student.getAge())
                 .collect(Collectors.toList());
     }
 }

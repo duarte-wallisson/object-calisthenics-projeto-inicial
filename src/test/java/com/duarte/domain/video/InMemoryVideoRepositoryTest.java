@@ -3,7 +3,6 @@ package com.duarte.domain.video;
 import com.duarte.domain.student.Student;
 import org.junit.jupiter.api.Test;
 
-import java.time.LocalDate;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -24,8 +23,7 @@ class InMemoryVideoRepositoryTest {
 
         // Cria um mock de Student com idade de 19 anos
         Student student = mock(Student.class);
-        LocalDate nineteenYearsAgo = LocalDate.now().minusYears(19);
-        when(student.getBirthDate()).thenReturn(nineteenYearsAgo);
+        when(student.getAge()).thenReturn(19);
 
         List<Video> videoList = repository.videosFor(student);
 

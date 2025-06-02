@@ -5,6 +5,7 @@ import com.duarte.domain.video.Video;
 import lombok.*;
 
 import java.time.LocalDate;
+import java.time.Period;
 import java.time.temporal.ChronoUnit;
 
 @Builder
@@ -52,5 +53,10 @@ public class Student {
 
         long daysSinceFirst = ChronoUnit.DAYS.between(firstDate, LocalDate.now());
         return daysSinceFirst < 90;
+    }
+
+    public int getAge() {
+        LocalDate today = LocalDate.now();
+        return Period.between(this.getBirthDate(), today).getYears();
     }
 }
