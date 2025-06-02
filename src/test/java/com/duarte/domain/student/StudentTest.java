@@ -1,10 +1,12 @@
 package com.duarte.domain.student;
 
+import com.duarte.domain.email.Email;
 import com.duarte.domain.video.Video;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
+import java.util.HashMap;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -15,8 +17,9 @@ class StudentTest {
     @BeforeEach
     void setUp() {
         student = new Student(
-                "email@example.com",
+                new Email("email@example.com"),
                 LocalDate.of(1997, 10, 15),
+                new WatchedVideos(new HashMap<>()),
                 "Vinicius",
                 "Dias",
                 "Rua de Exemplo",
