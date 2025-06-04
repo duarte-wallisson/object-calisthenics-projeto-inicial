@@ -18,19 +18,16 @@ public class Student {
     private Email email;
     private LocalDate birthDate;
     private WatchedVideos watchedVideos;
-    private String firstName;
-    private String lastName;
-
-    public String street;
-    public String number;
-    public String province;
-    public String city;
-    public String state;
-    public String country;
+    private FullName fullName;
+    private Address address;
 
 
     public String getFullName() {
-        return firstName + " " + lastName;
+        return fullName.toString();
+    }
+
+    public String getAddress() {
+        return address.toString();
     }
 
     public String getEmail() {

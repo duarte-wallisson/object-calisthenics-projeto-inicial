@@ -20,14 +20,14 @@ class StudentTest {
                 new Email("email@example.com"),
                 LocalDate.of(1997, 10, 15),
                 new WatchedVideos(new HashMap<>()),
-                "Vinicius",
-                "Dias",
-                "Rua de Exemplo",
-                "71B",
-                "Meu Bairro",
-                "Minha Cidade",
-                "Meu estado",
-                "Brasil"
+                new FullName("Wallisson", "Duarte"),
+                new Address(
+                        "Rua de Exemplo",
+                        "71B",
+                        "Meu Bairro",
+                        "Minha Cidade",
+                        "Meu estado",
+                        "Brasil")
         );
     }
 

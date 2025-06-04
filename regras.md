@@ -14,3 +14,7 @@
    1. lei de Demeter (não falar com estranhos)
    2. Exceção: fluent interface
 7. Nunca abrevie
+8. Mantenha suas classes (máx. 50 linhas) e pacote pequenos (máx. 10 classes)
+9. Tenha no máximo 2 propriedades por classe (Não é necessário seguir a risca)
+
+Object Calisthenics são exercícios de programação, formado por um conjunto de 9 regras criado por Jeff Bay no seu livro The ThoughtWorks Anthology
